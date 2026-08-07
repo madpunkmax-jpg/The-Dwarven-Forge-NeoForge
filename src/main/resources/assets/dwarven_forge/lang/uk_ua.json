@@ -1,0 +1,66 @@
+{
+  "itemGroup.dwarven_forge.main": "Гном'яча кузня",
+
+  "item.dwarven_forge.dwarven_metal_ingot": "Злиток гном'ячого металу",
+  "item.dwarven_forge.dwarven_helmet": "Гном'ячий шолом",
+  "item.dwarven_forge.dwarven_chestplate": "Гном'ячий нагрудник",
+  "item.dwarven_forge.dwarven_leggings": "Гном'ячі поножі",
+  "item.dwarven_forge.dwarven_boots": "Гном'ячі чоботи",
+
+  "item.dwarven_forge.dwarven_sword": "Гном'ячий меч",
+  "item.dwarven_forge.dwarven_pickaxe": "Гном'яче кайло",
+  "item.dwarven_forge.dwarven_axe": "Гном'яча сокира",
+  "item.dwarven_forge.dwarven_shovel": "Гном'яча лопата",
+  "item.dwarven_forge.dwarven_hoe": "Гном'яча мотика",
+
+  "item.dwarven_forge.dwarf_spawn_egg": "Яйце призову гнома",
+
+
+  "tooltip.item.dwarven_forge.runes": "Руни: ",
+  "tooltip.item.dwarven_forge.empty": "[Порожньо]",
+
+  "tooltip.dwarven_forge.rune.lesser_strength": "Мала сила",
+  "tooltip.dwarven_forge.rune.strength": "Сила",
+  "tooltip.dwarven_forge.rune.greater_strength": "Велика сила",
+
+  "tooltip.dwarven_forge.rune.lesser_speed": "Мала швидкість",
+  "tooltip.dwarven_forge.rune.speed": "Швидкість",
+  "tooltip.dwarven_forge.rune.greater_speed": "Велика швидкість",
+
+  "tooltip.dwarven_forge.rune.lesser_armor": "Мала броня",
+  "tooltip.dwarven_forge.rune.armor": "Броня",
+  "tooltip.dwarven_forge.rune.greater_armor": "Велика броня",
+
+  "tooltip.dwarven_forge.rune.lesser_toughness": "Мала міцність",
+  "tooltip.dwarven_forge.rune.toughness": "Міцність",
+  "tooltip.dwarven_forge.rune.greater_toughness": "Велика міцність",
+
+  "tooltip.dwarven_forge.rune.lesser_health": "Мале здоров'я",
+  "tooltip.dwarven_forge.rune.health": "Здоров'я",
+  "tooltip.dwarven_forge.rune.greater_health": "Велике здоров'я",
+
+
+  "item.dwarven_forge.rune": "Гном'яча руна",
+
+
+  "attribute.name.generic.magic_resistance": "Опір магії",
+  "attribute.name.generic.explosion_resistance": "Опір вибухам",
+
+  "tooltip.dwarven_forge.armor_penetration": "%s%% пробиття броні",
+
+  "entity.dwarven_forge.dwarf.none": "Гном",
+  "entity.dwarven_forge.dwarf.toolsmith": "Гном-коваль",
+  "entity.dwarven_forge.dwarf.butcher": "Гном-м'ясник",
+  "entity.dwarven_forge.dwarf.leatherworker": "Гном-шкіряник",
+  "entity.dwarven_forge.dwarf.farmer": "Гном-фермер",
+  "entity.dwarven_forge.dwarf.mason": "Гном-шахтар",
+  "entity.dwarven_forge.dwarf.warrior": "Гном-воїн",
+
+  "dwarven_forge.sounds.dwarf_ambient": "Гном бурмоче",
+  "dwarven_forge.sounds.dwarf_celebrate": "Гном радіє",
+  "dwarven_forge.sounds.dwarf_death": "Гном помирає",
+  "dwarven_forge.sounds.dwarf_hurt": "Гном поранений",
+  "dwarven_forge.sounds.dwarf_no": "Гном не погоджується",
+  "dwarven_forge.sounds.dwarf_trade": "Гном торгує",
+  "dwarven_forge.sounds.dwarf_yes": "Гном погоджується"
+}
