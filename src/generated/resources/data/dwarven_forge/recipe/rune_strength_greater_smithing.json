@@ -1,0 +1,12 @@
+{
+  "type": "dwarven_forge:rune_smithing",
+  "addition": {
+    "item": "minecraft:diamond"
+  },
+  "base": {
+    "tag": "c:armors"
+  },
+  "rune": {
+    "item": "dwarven_forge:rune_strength_greater"
+  }
+}

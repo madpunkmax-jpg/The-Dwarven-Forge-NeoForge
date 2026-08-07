@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rune_strength_greater": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dwarven_forge:rune_strength_greater"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "dwarven_forge:rune_strength_greater_smithing"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_rune_strength_greater"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "dwarven_forge:rune_strength_greater_smithing"
+    ]
+  }
+}

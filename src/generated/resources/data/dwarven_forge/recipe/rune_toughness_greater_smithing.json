@@ -1,0 +1,12 @@
+{
+  "type": "dwarven_forge:rune_smithing",
+  "addition": {
+    "item": "minecraft:gold_ingot"
+  },
+  "base": {
+    "tag": "c:armors"
+  },
+  "rune": {
+    "item": "dwarven_forge:rune_toughness_greater"
+  }
+}

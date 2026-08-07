@@ -1,0 +1,66 @@
+{
+  "itemGroup.dwarven_forge.main": "The Dwarven Forge",
+
+  "item.dwarven_forge.dwarven_metal_ingot": "Dwarven Metal Ingot",
+  "item.dwarven_forge.dwarven_helmet": "Dwarven Helmet",
+  "item.dwarven_forge.dwarven_chestplate": "Dwarven Chestplate",
+  "item.dwarven_forge.dwarven_leggings": "Dwarven Leggings",
+  "item.dwarven_forge.dwarven_boots": "Dwarven Boots",
+
+  "item.dwarven_forge.dwarven_sword": "Dwarven Sword",
+  "item.dwarven_forge.dwarven_pickaxe": "Dwarven Pickaxe",
+  "item.dwarven_forge.dwarven_axe": "Dwarven Axe",
+  "item.dwarven_forge.dwarven_shovel": "Dwarven Shovel",
+  "item.dwarven_forge.dwarven_hoe": "Dwarven Hoe",
+
+  "item.dwarven_forge.dwarf_spawn_egg": "Dwarf Spawn Egg",
+
+
+  "tooltip.item.dwarven_forge.runes": "Runes: ",
+  "tooltip.item.dwarven_forge.empty": "[Empty]",
+
+  "tooltip.dwarven_forge.rune.lesser_strength": "Lesser Strength",
+  "tooltip.dwarven_forge.rune.strength": "Strength",
+  "tooltip.dwarven_forge.rune.greater_strength": "Greater Strength",
+
+  "tooltip.dwarven_forge.rune.lesser_speed": "Lesser Speed",
+  "tooltip.dwarven_forge.rune.speed": "Speed",
+  "tooltip.dwarven_forge.rune.greater_speed": "Greater Speed",
+
+  "tooltip.dwarven_forge.rune.lesser_armor": "Lesser Armor",
+  "tooltip.dwarven_forge.rune.armor": "Armor",
+  "tooltip.dwarven_forge.rune.greater_armor": "Greater Armor",
+
+  "tooltip.dwarven_forge.rune.lesser_toughness": "Lesser Toughness",
+  "tooltip.dwarven_forge.rune.toughness": "Toughness",
+  "tooltip.dwarven_forge.rune.greater_toughness": "Greater Toughness",
+
+  "tooltip.dwarven_forge.rune.lesser_health": "Lesser Health",
+  "tooltip.dwarven_forge.rune.health": "Health",
+  "tooltip.dwarven_forge.rune.greater_health": "Greater Health",
+
+
+  "item.dwarven_forge.rune": "Dwarven Rune",
+
+
+  "attribute.name.generic.magic_resistance": "Magic Resistance",
+  "attribute.name.generic.explosion_resistance": "Explosion Resistance",
+
+  "tooltip.dwarven_forge.armor_penetration": "%s%% Armor Penetration",
+
+  "entity.dwarven_forge.dwarf.none": "Dwarf",
+  "entity.dwarven_forge.dwarf.toolsmith": "Dwarven Forger",
+  "entity.dwarven_forge.dwarf.butcher": "Dwarven Butcher",
+  "entity.dwarven_forge.dwarf.leatherworker": "Dwarven Leatherworker",
+  "entity.dwarven_forge.dwarf.farmer": "Dwarven Farmer",
+  "entity.dwarven_forge.dwarf.mason": "Dwarven Miner",
+  "entity.dwarven_forge.dwarf.warrior": "Dwarven Warrior",
+
+  "dwarven_forge.sounds.dwarf_ambient": "Dwarf mumbles",
+  "dwarven_forge.sounds.dwarf_celebrate": "Dwarf cheers",
+  "dwarven_forge.sounds.dwarf_death": "Dwarf dies",
+  "dwarven_forge.sounds.dwarf_hurt": "Dwarf hurts",
+  "dwarven_forge.sounds.dwarf_no": "Dwarf disagrees",
+  "dwarven_forge.sounds.dwarf_trade": "Dwarf trades",
+  "dwarven_forge.sounds.dwarf_yes": "Dwarf agrees"
+}

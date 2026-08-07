@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "package": "dwarven_forge.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "GrindstoneMenuMixin",
+    "ItemStackMixin",
+    "LivingEntityMixin",
+    "VillagerHostilesSensorMixin",
+    "ZombieMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "client": [
+  ]
+}

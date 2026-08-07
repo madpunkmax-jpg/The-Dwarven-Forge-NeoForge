@@ -1,0 +1,57 @@
+{
+  "dwarf_ambient": {
+    "subtitle": "dwarven_forge.sounds.dwarf_ambient",
+    "sounds": [
+      "dwarven_forge:entity/dwarf/dwarf_idle1",
+      "dwarven_forge:entity/dwarf/dwarf_idle2",
+      "dwarven_forge:entity/dwarf/dwarf_idle3"
+    ]
+  },
+  "dwarf_trade": {
+    "subtitle": "dwarven_forge.sounds.dwarf_trade",
+    "sounds": [
+      "dwarven_forge:entity/dwarf/dwarf_trade1",
+      "dwarven_forge:entity/dwarf/dwarf_trade2",
+      "dwarven_forge:entity/dwarf/dwarf_trade3"
+    ]
+  },
+  "dwarf_hurt": {
+    "subtitle": "dwarven_forge.sounds.dwarf_hurt",
+    "sounds": [
+      "dwarven_forge:entity/dwarf/dwarf_hurt1",
+      "dwarven_forge:entity/dwarf/dwarf_hurt2",
+      "dwarven_forge:entity/dwarf/dwarf_hurt3",
+      "dwarven_forge:entity/dwarf/dwarf_hurt4"
+    ]
+  },
+  "dwarf_death": {
+    "subtitle": "dwarven_forge.sounds.dwarf_death",
+    "sounds": [
+      "dwarven_forge:entity/dwarf/dwarf_death"
+    ]
+  },
+  "dwarf_yes": {
+    "subtitle": "dwarven_forge.sounds.dwarf_yes",
+    "sounds": [
+      "dwarven_forge:entity/dwarf/dwarf_accept1",
+      "dwarven_forge:entity/dwarf/dwarf_accept2",
+      "dwarven_forge:entity/dwarf/dwarf_accept3"
+    ]
+  },
+  "dwarf_no": {
+    "subtitle": "dwarven_forge.sounds.dwarf_no",
+    "sounds": [
+      "dwarven_forge:entity/dwarf/dwarf_deny1",
+      "dwarven_forge:entity/dwarf/dwarf_deny2",
+      "dwarven_forge:entity/dwarf/dwarf_deny3"
+    ]
+  },
+  "dwarf_celebrate": {
+    "subtitle": "dwarven_forge.sounds.dwarf_celebrate",
+    "sounds": [
+      "dwarven_forge:entity/dwarf/dwarf_accept1",
+      "dwarven_forge:entity/dwarf/dwarf_accept2",
+      "dwarven_forge:entity/dwarf/dwarf_accept3"
+    ]
+  }
+}

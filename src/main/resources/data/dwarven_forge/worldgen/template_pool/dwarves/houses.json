@@ -1,0 +1,207 @@
+{
+  "elements": [
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "dwarven_forge:dwarves/houses/dwarf_house_1",
+        "processors": "minecraft:mossify_10_percent",
+        "projection": "rigid"
+      },
+      "weight": 2
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "dwarven_forge:dwarves/houses/dwarf_house_2",
+        "processors": "minecraft:mossify_10_percent",
+        "projection": "rigid"
+      },
+      "weight": 2
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "dwarven_forge:dwarves/houses/dwarf_house_3",
+        "processors": "minecraft:mossify_10_percent",
+        "projection": "rigid"
+      },
+      "weight": 2
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "dwarven_forge:dwarves/houses/dwarf_bunkhouse_1",
+        "processors": "minecraft:mossify_10_percent",
+        "projection": "rigid"
+      },
+      "weight": 2
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "dwarven_forge:dwarves/houses/dwarf_bunkhouse_2",
+        "processors": "minecraft:mossify_10_percent",
+        "projection": "rigid"
+      },
+      "weight": 2
+    },
+
+
+
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "dwarven_forge:dwarves/houses/dwarf_butcher_shop_1",
+        "processors": "minecraft:mossify_10_percent",
+        "projection": "rigid"
+      },
+      "weight": 2
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "dwarven_forge:dwarves/houses/dwarf_butcher_shop_2",
+        "processors": "minecraft:mossify_10_percent",
+        "projection": "rigid"
+      },
+      "weight": 2
+    },
+
+
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "dwarven_forge:dwarves/houses/dwarf_forge_1",
+        "processors": "minecraft:mossify_10_percent",
+        "projection": "rigid"
+      },
+      "weight": 2
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "dwarven_forge:dwarves/houses/dwarf_forge_2",
+        "processors": "minecraft:mossify_10_percent",
+        "projection": "rigid"
+      },
+      "weight": 2
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "dwarven_forge:dwarves/houses/dwarf_forge_3",
+        "processors": "minecraft:mossify_10_percent",
+        "projection": "rigid"
+      },
+      "weight": 2
+    },
+
+
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "dwarven_forge:dwarves/houses/dwarf_mine_1",
+        "processors": "minecraft:mossify_10_percent",
+        "projection": "rigid"
+      },
+      "weight": 2
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "dwarven_forge:dwarves/houses/dwarf_mine_2",
+        "processors": "minecraft:mossify_10_percent",
+        "projection": "rigid"
+      },
+      "weight": 2
+    },
+
+
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "dwarven_forge:dwarves/houses/dwarf_tannery_1",
+        "processors": "minecraft:mossify_10_percent",
+        "projection": "rigid"
+      },
+      "weight": 2
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "dwarven_forge:dwarves/houses/dwarf_tannery_2",
+        "processors": "minecraft:mossify_10_percent",
+        "projection": "rigid"
+      },
+      "weight": 2
+    },
+
+
+
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "dwarven_forge:dwarves/houses/dwarf_barracks_1",
+        "processors": "minecraft:mossify_10_percent",
+        "projection": "rigid"
+      },
+      "weight": 2
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "dwarven_forge:dwarves/houses/dwarf_barracks_2",
+        "processors": "minecraft:mossify_10_percent",
+        "projection": "rigid"
+      },
+      "weight": 2
+    },
+
+
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "dwarven_forge:dwarves/houses/dwarf_farm_1",
+        "processors": "minecraft:farm_plains",
+        "projection": "rigid"
+      },
+      "weight": 4
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "dwarven_forge:dwarves/houses/dwarf_farm_2",
+        "processors": "minecraft:farm_plains",
+        "projection": "rigid"
+      },
+      "weight": 4
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "dwarven_forge:dwarves/houses/dwarf_farm_3",
+        "processors": "minecraft:farm_plains",
+        "projection": "rigid"
+      },
+      "weight": 4
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "dwarven_forge:dwarves/houses/dwarf_farm_4",
+        "processors": "minecraft:farm_plains",
+        "projection": "rigid"
+      },
+      "weight": 4
+    },
+
+
+    {
+      "element": {
+        "element_type": "minecraft:empty_pool_element"
+      },
+      "weight": 1
+    }
+  ],
+  "fallback": "dwarven_forge:dwarves/terminators"
+}

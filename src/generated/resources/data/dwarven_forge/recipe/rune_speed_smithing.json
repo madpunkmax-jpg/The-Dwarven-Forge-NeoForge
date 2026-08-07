@@ -1,0 +1,12 @@
+{
+  "type": "dwarven_forge:rune_smithing",
+  "addition": {
+    "item": "minecraft:amethyst_shard"
+  },
+  "base": {
+    "tag": "c:armors"
+  },
+  "rune": {
+    "item": "dwarven_forge:rune_speed"
+  }
+}

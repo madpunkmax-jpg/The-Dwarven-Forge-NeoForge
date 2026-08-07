@@ -1,0 +1,12 @@
+{
+  "type": "dwarven_forge:rune_smithing",
+  "addition": {
+    "item": "minecraft:echo_shard"
+  },
+  "base": {
+    "tag": "c:armors"
+  },
+  "rune": {
+    "item": "dwarven_forge:rune_health_greater"
+  }
+}

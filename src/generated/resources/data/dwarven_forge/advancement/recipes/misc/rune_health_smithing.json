@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rune_health": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dwarven_forge:rune_health"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "dwarven_forge:rune_health_smithing"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_rune_health"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "dwarven_forge:rune_health_smithing"
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+// 1.21.1	2026-07-28T17:41:47.1293564	Tags for minecraft:item mod id dwarven_forge
+68be0b0937e09228b0c21ae4bae326e7c4067ebf data/c/tags/item/armors.json
+9833ce7a7a672d8d6d9a1d667ca6b1f53d660404 data/c/tags/item/tools.json
+fe29011f214d897584b563ddb44f042d6e9b703f data/minecraft/tags/item/axes.json
+aa6f192e6e01f085de73ebb156a996173d5696f9 data/minecraft/tags/item/hoes.json
+51a736d87e105c905ea0b5d30986ceebe4a9918c data/minecraft/tags/item/pickaxes.json
+2374667967fa4906312d5cf70390bf81827d1a49 data/minecraft/tags/item/shovels.json
+2da7a8b05890cb6dbf237a52a5418560e19a8fe5 data/minecraft/tags/item/swords.json

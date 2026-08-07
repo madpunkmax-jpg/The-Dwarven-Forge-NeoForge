@@ -1,0 +1,17 @@
+{
+  "structures": [
+    {
+      "structure": "dwarven_forge:dwarven_village",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 9285176031,
+
+    "spacing": 34,
+
+    "separation": 8,
+
+    "type": "minecraft:random_spread"
+  }
+}
