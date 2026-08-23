@@ -17,9 +17,11 @@ A new playable-adjacent race — dwarves — along with:
 
 - Minecraft 1.21.1
 - NeoForge 21.1.244+
-- [GeckoLib](https://github.com/bernie-g/geckolib) 4.9.2
-- [JEI](https://github.com/mezz/JustEnoughItems) 19.42.0.379
-- [Health Indicator TXF](https://modrinth.com/mod/health-indicator-txf) 1.21.1-1.3.12
+- [GeckoLib](https://github.com/bernie-g/geckolib) 4.9.2 — the only required dependency (used for the dwarf entity/armor animations)
+
+### Optional (dev-environment only)
+
+[JEI](https://github.com/mezz/JustEnoughItems) and [Health Indicator TXF](https://modrinth.com/mod/health-indicator-txf) are pulled in as `compileOnly`/`localRuntime` for convenience while testing via `runClient` — the mod doesn't call either API and doesn't need them present at runtime; they're not bundled or declared as dependencies in the shipped jar.
 
 ## Building / running
 
