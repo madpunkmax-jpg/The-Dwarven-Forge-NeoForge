@@ -5,6 +5,7 @@ import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import com.mojang.datafixers.util.Pair;
 import dwarven_forge.entity.DwarfEntity;
+import dwarven_forge.registry.DwarvenForge_Entities;
 import net.minecraft.core.Holder;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.*;
@@ -16,6 +17,8 @@ import net.minecraft.world.entity.ai.memory.MemoryStatus;
 import net.minecraft.world.entity.ai.sensing.Sensor;
 import net.minecraft.world.entity.ai.village.poi.PoiType;
 import net.minecraft.world.entity.ai.village.poi.PoiTypes;
+import net.minecraft.world.entity.monster.Creeper;
+import net.minecraft.world.entity.monster.Enemy;
 import net.minecraft.world.entity.npc.Villager;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.player.Player;
@@ -65,6 +68,7 @@ public class DwarfGoalPackages {
 
                 // Priority 2
                 Pair.of(2, PoiCompetitorScan.create()),
+                Pair.of(2, StartAttackingDwarf.create(dwarf-> !dwarf.isBaby(), DwarfGoalPackages::findNearestValidAttackTarget)),
 
                 // Priority 3
                 Pair.of(3, new LookAndFollowTradingPlayerSink(speed)),
@@ -120,7 +124,7 @@ public class DwarfGoalPackages {
                 Pair.of(1, new MoveToTargetSink()),
 
 //                Pair.of(2, PoiCompetitorScan.create()),
-                Pair.of(2, StartAttackingDwarf.create(dwarf->true, DwarfGoalPackages::findNearestValidAttackTarget)),
+                Pair.of(2, StartAttackingDwarf.create(dwarf->true, DwarfGoalPackages::findNearestValidWarriorAttackTarget)),
 
                 Pair.of(3, new LookAndFollowTradingPlayerSink(speed)),
 
@@ -187,7 +191,7 @@ public class DwarfGoalPackages {
                 Pair.of(5, new RunOne<>(
                         ImmutableMap.of(MemoryModuleType.VISIBLE_VILLAGER_BABIES, MemoryStatus.VALUE_ABSENT),
                         ImmutableList.of(
-                                Pair.of(InteractWith.of(EntityType.VILLAGER, 8, MemoryModuleType.INTERACTION_TARGET, p_24584_, 2), 2),
+                                Pair.of(InteractWith.of(DwarvenForge_Entities.DWARF.get(), 8, MemoryModuleType.INTERACTION_TARGET, p_24584_, 2), 2),
                                 Pair.of(InteractWith.of(EntityType.CAT, 8, MemoryModuleType.INTERACTION_TARGET, p_24584_, 2), 1),
                                 Pair.of(VillageBoundRandomStroll.create(p_24584_), 1),
                                 Pair.of(SetWalkTargetFromLookTarget.create(p_24584_, 2), 1),
@@ -246,7 +250,7 @@ public class DwarfGoalPackages {
                         ImmutableSet.of(MemoryModuleType.INTERACTION_TARGET),
                         GateBehavior.OrderPolicy.ORDERED,
                         GateBehavior.RunningPolicy.RUN_ONE,
-                        ImmutableList.of(Pair.of(new TradeWithVillager(), 1))
+                        ImmutableList.of(Pair.of(new DwarfTradeWithVillager(), 1))
                 )),
 
                 getFullLookBehavior(),
@@ -281,7 +285,7 @@ public class DwarfGoalPackages {
                         ImmutableSet.of(MemoryModuleType.INTERACTION_TARGET),
                         GateBehavior.OrderPolicy.ORDERED,
                         GateBehavior.RunningPolicy.RUN_ONE,
-                        ImmutableList.of(Pair.of(new TradeWithVillager(), 1))
+                        ImmutableList.of(Pair.of(new DwarfTradeWithVillager(), 1))
                 )),
 
                 getFullLookBehavior(),
@@ -294,8 +298,8 @@ public class DwarfGoalPackages {
         return ImmutableList.of(
 
                 Pair.of(2, new RunOne<>(ImmutableList.of(
-                        Pair.of(InteractWith.of(EntityType.VILLAGER, 8, MemoryModuleType.INTERACTION_TARGET, p_24600_, 2), 2),
-                        Pair.of(InteractWith.of(EntityType.VILLAGER, 8, AgeableMob::canBreed, AgeableMob::canBreed, MemoryModuleType.BREED_TARGET, p_24600_, 2), 1),
+                        Pair.of(InteractWith.of(DwarvenForge_Entities.DWARF.get(), 8, MemoryModuleType.INTERACTION_TARGET, p_24600_, 2), 2),
+                        Pair.of(InteractWith.of(DwarvenForge_Entities.DWARF.get(), 8, AgeableMob::canBreed, AgeableMob::canBreed, MemoryModuleType.BREED_TARGET, p_24600_, 2), 1),
                         Pair.of(InteractWith.of(EntityType.CAT, 8, MemoryModuleType.INTERACTION_TARGET, p_24600_, 2), 1),
                         Pair.of(VillageBoundRandomStroll.create(p_24600_), 1),
                         Pair.of(SetWalkTargetFromLookTarget.create(p_24600_, 2), 1),
@@ -311,7 +315,7 @@ public class DwarfGoalPackages {
                         ImmutableSet.of(MemoryModuleType.INTERACTION_TARGET),
                         GateBehavior.OrderPolicy.ORDERED,
                         GateBehavior.RunningPolicy.RUN_ONE,
-                        ImmutableList.of(Pair.of(new TradeWithVillager(), 1))
+                        ImmutableList.of(Pair.of(new DwarfTradeWithVillager(), 1))
                 )),
 
                 Pair.of(3, new GateBehavior<>(
@@ -319,7 +323,7 @@ public class DwarfGoalPackages {
                         ImmutableSet.of(MemoryModuleType.BREED_TARGET),
                         GateBehavior.OrderPolicy.ORDERED,
                         GateBehavior.RunningPolicy.RUN_ONE,
-                        ImmutableList.of(Pair.of(new VillagerMakeLove(), 1))
+                        ImmutableList.of(Pair.of(new DwarfMakeLove(), 1))
                 )),
 
                 getFullLookBehavior(),
@@ -332,8 +336,8 @@ public class DwarfGoalPackages {
     public static ImmutableList<Pair<Integer, ? extends BehaviorControl<? super Villager>>> getIdlePackage(VillagerProfession profession, float p_24600_) {
         return ImmutableList.of(
                 Pair.of(2, new RunOne<>(ImmutableList.of(
-                        Pair.of(InteractWith.of(EntityType.VILLAGER, 8, MemoryModuleType.INTERACTION_TARGET, p_24600_, 2), 2),
-                        Pair.of(InteractWith.of(EntityType.VILLAGER, 8, AgeableMob::canBreed, AgeableMob::canBreed, MemoryModuleType.BREED_TARGET, p_24600_, 2), 1),
+                        Pair.of(InteractWith.of(DwarvenForge_Entities.DWARF.get(), 8, MemoryModuleType.INTERACTION_TARGET, p_24600_, 2), 2),
+                        Pair.of(InteractWith.of(DwarvenForge_Entities.DWARF.get(), 8, AgeableMob::canBreed, AgeableMob::canBreed, MemoryModuleType.BREED_TARGET, p_24600_, 2), 1),
                         Pair.of(InteractWith.of(EntityType.CAT, 8, MemoryModuleType.INTERACTION_TARGET, p_24600_, 2), 1),
                         Pair.of(VillageBoundRandomStroll.create(p_24600_), 1),
                         Pair.of(SetWalkTargetFromLookTarget.create(p_24600_, 2), 1),
@@ -350,7 +354,7 @@ public class DwarfGoalPackages {
                         ImmutableSet.of(MemoryModuleType.INTERACTION_TARGET),
                         GateBehavior.OrderPolicy.ORDERED,
                         GateBehavior.RunningPolicy.RUN_ONE,
-                        ImmutableList.of(Pair.of(new TradeWithVillager(), 1))
+                        ImmutableList.of(Pair.of(new DwarfTradeWithVillager(), 1))
                 )),
 
                 Pair.of(3, new GateBehavior<>(
@@ -358,7 +362,7 @@ public class DwarfGoalPackages {
                         ImmutableSet.of(MemoryModuleType.BREED_TARGET),
                         GateBehavior.OrderPolicy.ORDERED,
                         GateBehavior.RunningPolicy.RUN_ONE,
-                        ImmutableList.of(Pair.of(new VillagerMakeLove(), 1))
+                        ImmutableList.of(Pair.of(new DwarfMakeLove(), 1))
                 )),
 
                 getFullLookBehavior(),
@@ -433,11 +437,11 @@ public class DwarfGoalPackages {
     }
 
     private static Pair<Integer, BehaviorControl<LivingEntity>> getFullLookBehavior() {
-        return Pair.of(5, new RunOne<>(ImmutableList.of(Pair.of(SetEntityLookTarget.create(EntityType.CAT, 8.0F), 8), Pair.of(SetEntityLookTarget.create(EntityType.VILLAGER, 8.0F), 2), Pair.of(SetEntityLookTarget.create(EntityType.PLAYER, 8.0F), 2), Pair.of(SetEntityLookTarget.create(MobCategory.CREATURE, 8.0F), 1), Pair.of(SetEntityLookTarget.create(MobCategory.WATER_CREATURE, 8.0F), 1), Pair.of(SetEntityLookTarget.create(MobCategory.AXOLOTLS, 8.0F), 1), Pair.of(SetEntityLookTarget.create(MobCategory.UNDERGROUND_WATER_CREATURE, 8.0F), 1), Pair.of(SetEntityLookTarget.create(MobCategory.WATER_AMBIENT, 8.0F), 1), Pair.of(SetEntityLookTarget.create(MobCategory.MONSTER, 8.0F), 1), Pair.of(new DoNothing(30, 60), 2))));
+        return Pair.of(5, new RunOne<>(ImmutableList.of(Pair.of(SetEntityLookTarget.create(EntityType.CAT, 8.0F), 8), Pair.of(SetEntityLookTarget.create(EntityType.VILLAGER, 8.0F), 2), Pair.of(SetEntityLookTarget.create(DwarvenForge_Entities.DWARF.get(), 8.0F), 2), Pair.of(SetEntityLookTarget.create(EntityType.PLAYER, 8.0F), 2), Pair.of(SetEntityLookTarget.create(MobCategory.CREATURE, 8.0F), 1), Pair.of(SetEntityLookTarget.create(MobCategory.WATER_CREATURE, 8.0F), 1), Pair.of(SetEntityLookTarget.create(MobCategory.AXOLOTLS, 8.0F), 1), Pair.of(SetEntityLookTarget.create(MobCategory.UNDERGROUND_WATER_CREATURE, 8.0F), 1), Pair.of(SetEntityLookTarget.create(MobCategory.WATER_AMBIENT, 8.0F), 1), Pair.of(SetEntityLookTarget.create(MobCategory.MONSTER, 8.0F), 1), Pair.of(new DoNothing(30, 60), 2))));
     }
 
     private static Pair<Integer, BehaviorControl<LivingEntity>> getMinimalLookBehavior() {
-        return Pair.of(5, new RunOne<>(ImmutableList.of(Pair.of(SetEntityLookTarget.create(EntityType.VILLAGER, 8.0F), 2), Pair.of(SetEntityLookTarget.create(EntityType.PLAYER, 8.0F), 2), Pair.of(new DoNothing(30, 60), 8))));
+        return Pair.of(5, new RunOne<>(ImmutableList.of(Pair.of(SetEntityLookTarget.create(EntityType.VILLAGER, 8.0F), 2), Pair.of(SetEntityLookTarget.create(DwarvenForge_Entities.DWARF.get(), 8.0F), 2), Pair.of(SetEntityLookTarget.create(EntityType.PLAYER, 8.0F), 2), Pair.of(new DoNothing(30, 60), 8))));
     }
 
     private static boolean raidExistsAndActive(ServerLevel level, LivingEntity livingEntity) {
@@ -478,6 +482,21 @@ public class DwarfGoalPackages {
         else {
             return brain.getMemory(MemoryModuleType.ATTACK_TARGET);
         }
+    }
+
+    // Warriors additionally hunt down anything vanilla's Iron Golem would attack on sight
+    // (any Enemy except Creeper, see IronGolem's Mob-class NearestAttackableTargetGoal), on
+    // top of the reactive anger/hostile-sensor targeting every dwarf already has.
+    private static Optional<? extends LivingEntity> findNearestValidWarriorAttackTarget(Mob dwarf) {
+        Optional<? extends LivingEntity> reactiveTarget = findNearestValidAttackTarget(dwarf);
+        return reactiveTarget.isPresent() ? reactiveTarget : findNearestVisibleEnemy(dwarf);
+    }
+
+    private static Optional<LivingEntity> findNearestVisibleEnemy(Mob dwarf) {
+        return dwarf.getBrain().getMemory(MemoryModuleType.NEAREST_VISIBLE_LIVING_ENTITIES)
+                .flatMap(nearestVisibleLivingEntities -> nearestVisibleLivingEntities.findClosest(
+                        entity -> entity instanceof Enemy && !(entity instanceof Creeper) && Sensor.isEntityAttackableIgnoringLineOfSight(dwarf, entity)
+                ));
     }
 
     public static void wasHurtBy(DwarfEntity dwarf, LivingEntity enemy) {

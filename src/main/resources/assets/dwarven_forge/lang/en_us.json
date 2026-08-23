@@ -62,5 +62,23 @@
   "dwarven_forge.sounds.dwarf_hurt": "Dwarf hurts",
   "dwarven_forge.sounds.dwarf_no": "Dwarf disagrees",
   "dwarven_forge.sounds.dwarf_trade": "Dwarf trades",
-  "dwarven_forge.sounds.dwarf_yes": "Dwarf agrees"
+  "dwarven_forge.sounds.dwarf_yes": "Dwarf agrees",
+
+  "message.dwarven_forge.settlement.enter": "You have arrived at the ancient dwarven settlement - \"%s\".",
+  "message.dwarven_forge.settlement.leave": "You are leaving \"%s\".",
+
+  "dwarven_forge.settlement.name.khazad_dum": "Khazad-Dum",
+  "dwarven_forge.settlement.name.hammer_clan_stronghold": "Hammer Clan Stronghold",
+  "dwarven_forge.settlement.name.stone_clan_stronghold": "Stone Clan Stronghold",
+  "dwarven_forge.settlement.name.fiery_forge_stronghold": "Fiery Forge Stronghold",
+  "dwarven_forge.settlement.name.gear_clan_stronghold": "Gear Clan Stronghold",
+  "dwarven_forge.settlement.name.axe_clan_stronghold": "Axe Clan Stronghold",
+  "dwarven_forge.settlement.name.khar_tol": "Khar-Tol",
+  "dwarven_forge.settlement.name.azgad_dum": "Azgad-Dum",
+  "dwarven_forge.settlement.name.amethyston": "Amethyston",
+  "dwarven_forge.settlement.name.emeraldon": "Emeraldon",
+  "dwarven_forge.settlement.name.gar_tarnat": "Gar-Tarnat",
+  "dwarven_forge.settlement.name.white_stone": "White Stone",
+  "dwarven_forge.settlement.name.golden_forge": "Golden Forge",
+  "dwarven_forge.settlement.name.stalacton": "Stalacton"
 }

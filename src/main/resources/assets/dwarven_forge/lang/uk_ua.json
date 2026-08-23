@@ -62,5 +62,23 @@
   "dwarven_forge.sounds.dwarf_hurt": "Гном поранений",
   "dwarven_forge.sounds.dwarf_no": "Гном не погоджується",
   "dwarven_forge.sounds.dwarf_trade": "Гном торгує",
-  "dwarven_forge.sounds.dwarf_yes": "Гном погоджується"
+  "dwarven_forge.sounds.dwarf_yes": "Гном погоджується",
+
+  "message.dwarven_forge.settlement.enter": "Ви прибули до стародавнього поселення гномів - \"%s\".",
+  "message.dwarven_forge.settlement.leave": "Ви покидаєте \"%s\".",
+
+  "dwarven_forge.settlement.name.khazad_dum": "Кхазад-Дум",
+  "dwarven_forge.settlement.name.hammer_clan_stronghold": "Оплот Клана Молота",
+  "dwarven_forge.settlement.name.stone_clan_stronghold": "Оплот Клана Каменю",
+  "dwarven_forge.settlement.name.fiery_forge_stronghold": "Оплот Вогняної Кузні",
+  "dwarven_forge.settlement.name.gear_clan_stronghold": "Оплот Клана Шестерні",
+  "dwarven_forge.settlement.name.axe_clan_stronghold": "Оплот Клана Сокири",
+  "dwarven_forge.settlement.name.khar_tol": "Кхар-Тол",
+  "dwarven_forge.settlement.name.azgad_dum": "Азгад-Дум",
+  "dwarven_forge.settlement.name.amethyston": "Аметистон",
+  "dwarven_forge.settlement.name.emeraldon": "Смарагдон",
+  "dwarven_forge.settlement.name.gar_tarnat": "Ґар-Тарнат",
+  "dwarven_forge.settlement.name.white_stone": "Білий Камінь",
+  "dwarven_forge.settlement.name.golden_forge": "Золота Кузня",
+  "dwarven_forge.settlement.name.stalacton": "Сталактон"
 }

@@ -7,6 +7,7 @@ import dwarven_forge.entity.DwarvenForge_EntityAttributes;
 import dwarven_forge.registry.DwarvenForge_Entities;
 import dwarven_forge.registry.DwarvenForge_Items;
 import dwarven_forge.registry.DwarvenForge_ItemsMaterials;
+import dwarven_forge.registry.DwarvenForge_Sensors;
 import dwarven_forge.registry.DwarvenForge_Serializers;
 import dwarven_forge.registry.DwarvenForge_Sounds;
 import net.neoforged.bus.api.IEventBus;
@@ -61,6 +62,9 @@ public class DwarvenForgeMain
 
         //Schedules
         DwarvenForge_Schedules.initSchedules(); DwarvenForge_Registries.SCHEDULES.register(modEventBus);
+
+        //Sensors
+        DwarvenForge_Sensors.initSensors(); DwarvenForge_Registries.SENSOR_TYPES.register(modEventBus);
 
         // Register our mod's ModConfigSpec so that NeoForge can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, DwarvenForgeConfig.SPEC);

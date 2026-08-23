@@ -10,6 +10,7 @@ import dwarven_forge.ai.DwarvenForge_Schedules;
 import dwarven_forge.ai.behavior.DwarfGoalPackages;
 import dwarven_forge.registry.DwarvenForge_Entities;
 import dwarven_forge.registry.DwarvenForge_Items;
+import dwarven_forge.registry.DwarvenForge_Sensors;
 import dwarven_forge.registry.DwarvenForge_Sounds;
 import dwarven_forge.utils.GeoControllersUtil;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
@@ -272,10 +273,17 @@ public class DwarfEntity extends Villager implements GeoEntity {
             if(entityAttributeInstance_knockback!=null) entityAttributeInstance_knockback.removeModifier(WARRIOR_KNOCKBACK_BOOST);
         }
 
-        //Heals passively 1HP each 50 ticks (1HP each 2.5s)
-        if(this.isWarrior() && !this.isAggressive() && this.tickCount%50==0){
-            if (this.getHealth() < this.getMaxHealth()) {
-                this.heal(1.0F);
+        if(!this.isAggressive() && this.getHealth() < this.getMaxHealth()){
+            if(this.isWarrior()){
+                //Heals passively 1HP each 50 ticks (1HP each 2.5s)
+                if(this.tickCount%50==0){
+                    this.heal(1.0F);
+                }
+            } else {
+                //Heals passively 1HP each 100 ticks (1HP each 5s)
+                if(this.tickCount%100==0){
+                    this.heal(1.0F);
+                }
             }
         }
     }
@@ -360,7 +368,7 @@ public class DwarfEntity extends Villager implements GeoEntity {
                 SensorType.NEAREST_BED,
                 SensorType.HURT_BY,
                 SensorType.VILLAGER_HOSTILES,
-                SensorType.VILLAGER_BABIES,
+                DwarvenForge_Sensors.DWARF_BABIES.get(),
                 SensorType.SECONDARY_POIS,
                 SensorType.GOLEM_DETECTED
         );
@@ -402,10 +410,10 @@ public class DwarfEntity extends Villager implements GeoEntity {
 
         this.setAggressive(brain.hasMemoryValue(MemoryModuleType.ATTACK_TARGET));
 
-        if(this.isWarrior() && this.isAggressive())
+        if(this.isAggressive())
             brain.setActiveActivityToFirstValid(ImmutableList.of(Activity.FIGHT));
 
-        if(this.isWarrior() && !this.isAggressive() && this.brain.isActive(Activity.FIGHT))
+        if(!this.isAggressive() && this.brain.isActive(Activity.FIGHT))
             brain.setActiveActivityToFirstValid(ImmutableList.of(Activity.IDLE));
     }
 
@@ -452,6 +460,7 @@ public class DwarfEntity extends Villager implements GeoEntity {
             brain.setSchedule(Schedule.VILLAGER_DEFAULT);
 
             brain.addActivity(Activity.CORE, DwarfGoalPackages.getCorePackage(profession, 0.5F));
+            brain.addActivityAndRemoveMemoryWhenStopped(Activity.FIGHT, 0, DwarfGoalPackages.initFightActivity(this), MemoryModuleType.ATTACK_TARGET);
             brain.addActivityWithConditions(Activity.WORK, DwarfGoalPackages.getWorkPackage(profession, 0.5F), ImmutableSet.of(Pair.of(MemoryModuleType.JOB_SITE, MemoryStatus.VALUE_PRESENT)));
             brain.addActivityWithConditions(Activity.MEET, DwarfGoalPackages.getMeetPackage(profession, 0.5F), ImmutableSet.of(Pair.of(MemoryModuleType.MEETING_POINT, MemoryStatus.VALUE_PRESENT)));
             brain.addActivity(Activity.IDLE, DwarfGoalPackages.getIdlePackage(profession, 0.5F));
