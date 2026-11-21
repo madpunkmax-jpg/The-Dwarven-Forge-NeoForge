@@ -1,19 +1,19 @@
 {
-  "itemGroup.dwarven_forge.main": "Гном'яча кузня",
+  "itemGroup.dwarven_forge.main": "Дварфійська кузня",
 
-  "item.dwarven_forge.dwarven_metal_ingot": "Злиток гном'ячого металу",
-  "item.dwarven_forge.dwarven_helmet": "Гном'ячий шолом",
-  "item.dwarven_forge.dwarven_chestplate": "Гном'ячий нагрудник",
-  "item.dwarven_forge.dwarven_leggings": "Гном'ячі поножі",
-  "item.dwarven_forge.dwarven_boots": "Гном'ячі чоботи",
+  "item.dwarven_forge.dwarven_metal_ingot": "Злиток дварфійського металу",
+  "item.dwarven_forge.dwarven_helmet": "Дварфійський шолом",
+  "item.dwarven_forge.dwarven_chestplate": "Дварфійський нагрудник",
+  "item.dwarven_forge.dwarven_leggings": "Дварфійські поножі",
+  "item.dwarven_forge.dwarven_boots": "Дварфійські чоботи",
 
-  "item.dwarven_forge.dwarven_sword": "Гном'ячий меч",
-  "item.dwarven_forge.dwarven_pickaxe": "Гном'яче кайло",
-  "item.dwarven_forge.dwarven_axe": "Гном'яча сокира",
-  "item.dwarven_forge.dwarven_shovel": "Гном'яча лопата",
-  "item.dwarven_forge.dwarven_hoe": "Гном'яча мотика",
+  "item.dwarven_forge.dwarven_sword": "Дварфійський меч",
+  "item.dwarven_forge.dwarven_pickaxe": "Дварфійське кайло",
+  "item.dwarven_forge.dwarven_axe": "Дварфійська сокира",
+  "item.dwarven_forge.dwarven_shovel": "Дварфійська лопата",
+  "item.dwarven_forge.dwarven_hoe": "Дварфійська мотика",
 
-  "item.dwarven_forge.dwarf_spawn_egg": "Яйце призову гнома",
+  "item.dwarven_forge.dwarf_spawn_egg": "Яйце призову дварфа",
 
 
   "tooltip.item.dwarven_forge.runes": "Руни: ",
@@ -40,7 +40,7 @@
   "tooltip.dwarven_forge.rune.greater_health": "Велике здоров'я",
 
 
-  "item.dwarven_forge.rune": "Гном'яча руна",
+  "item.dwarven_forge.rune": "Дварфійська руна",
 
 
   "attribute.name.generic.magic_resistance": "Опір магії",
@@ -48,23 +48,23 @@
 
   "tooltip.dwarven_forge.armor_penetration": "%s%% пробиття броні",
 
-  "entity.dwarven_forge.dwarf.none": "Гном",
-  "entity.dwarven_forge.dwarf.toolsmith": "Гном-коваль",
-  "entity.dwarven_forge.dwarf.butcher": "Гном-м'ясник",
-  "entity.dwarven_forge.dwarf.leatherworker": "Гном-шкіряник",
-  "entity.dwarven_forge.dwarf.farmer": "Гном-фермер",
-  "entity.dwarven_forge.dwarf.mason": "Гном-шахтар",
-  "entity.dwarven_forge.dwarf.warrior": "Гном-воїн",
+  "entity.dwarven_forge.dwarf.none": "Дварф",
+  "entity.dwarven_forge.dwarf.toolsmith": "Дварф-коваль",
+  "entity.dwarven_forge.dwarf.butcher": "Дварф-м'ясник",
+  "entity.dwarven_forge.dwarf.leatherworker": "Дварф-шкіряник",
+  "entity.dwarven_forge.dwarf.farmer": "Дварф-фермер",
+  "entity.dwarven_forge.dwarf.mason": "Дварф-шахтар",
+  "entity.dwarven_forge.dwarf.warrior": "Дварф-воїн",
 
-  "dwarven_forge.sounds.dwarf_ambient": "Гном бурмоче",
-  "dwarven_forge.sounds.dwarf_celebrate": "Гном радіє",
-  "dwarven_forge.sounds.dwarf_death": "Гном помирає",
-  "dwarven_forge.sounds.dwarf_hurt": "Гном поранений",
-  "dwarven_forge.sounds.dwarf_no": "Гном не погоджується",
-  "dwarven_forge.sounds.dwarf_trade": "Гном торгує",
-  "dwarven_forge.sounds.dwarf_yes": "Гном погоджується",
+  "dwarven_forge.sounds.dwarf_ambient": "Дварф бурмоче",
+  "dwarven_forge.sounds.dwarf_celebrate": "Дварф радіє",
+  "dwarven_forge.sounds.dwarf_death": "Дварф помирає",
+  "dwarven_forge.sounds.dwarf_hurt": "Дварф поранений",
+  "dwarven_forge.sounds.dwarf_no": "Дварф не погоджується",
+  "dwarven_forge.sounds.dwarf_trade": "Дварф торгує",
+  "dwarven_forge.sounds.dwarf_yes": "Дварф погоджується",
 
-  "message.dwarven_forge.settlement.enter": "Ви прибули до стародавнього поселення гномів - \"%s\".",
+  "message.dwarven_forge.settlement.enter": "Ви прибули до стародавнього поселення дварфів - \"%s\".",
   "message.dwarven_forge.settlement.leave": "Ви покидаєте \"%s\".",
 
   "dwarven_forge.settlement.name.khazad_dum": "Кхазад-Дум",
