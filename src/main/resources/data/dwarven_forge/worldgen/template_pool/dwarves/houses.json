@@ -51,7 +51,7 @@
     {
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "dwarven_forge:dwarves/houses/dwarf_butcher_shop_1",
+        "location": "dwarven_forge:dwarves/houses/dwarf_butchers_shop_1",
         "processors": "minecraft:mossify_10_percent",
         "projection": "rigid"
       },
@@ -60,7 +60,7 @@
     {
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "dwarven_forge:dwarves/houses/dwarf_butcher_shop_2",
+        "location": "dwarven_forge:dwarves/houses/dwarf_butchers_shop_2",
         "processors": "minecraft:mossify_10_percent",
         "projection": "rigid"
       },

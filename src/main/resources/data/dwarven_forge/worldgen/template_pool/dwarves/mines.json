@@ -12,7 +12,7 @@
     {
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "dwarven_forge:dwarves/mines/mine_2",
+        "location": "dwarven_forge:dwarves/mines/mine_1",
         "processors": "minecraft:empty",
         "projection": "rigid"
       },
